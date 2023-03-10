@@ -16,6 +16,12 @@ const envAdapter = () => {
   }
 }
 
+var customPort = 2999;
+if (process.env.PORT)
+{
+  customPort = parseInt(process.env.PORT);
+}
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -29,4 +35,5 @@ export default defineConfig({
       process.env.OUTPUT == 'vercel' && vercelDisableBlocks(),
     ]
   },
+  server: { port: customPort, host: true }
 });
