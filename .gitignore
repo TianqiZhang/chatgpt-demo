@@ -1,6 +1,7 @@
 # build output
 dist/
 .vercel/
+.vscode/
 
 # generated types
 .astro/
