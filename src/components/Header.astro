@@ -1,10 +1,11 @@
 ---
+import { model } from '../utils/openAI'
 import Logo from './Logo.astro'
 import Themetoggle from './Themetoggle.astro'
 ---
 
 <header>
-  <div class="fb">
+  <div class="fb items-center">
     <Logo />
     <Themetoggle />
   </div>
@@ -12,5 +13,7 @@ import Themetoggle from './Themetoggle.astro'
     <span class="gpt-title">ChatBot</span>
     <span class="gpt-subtitle">123</span>
   </div>
-  <p mt-1 op-60>For Yang, Bob and Yina.</p>
+
+  <p mt-1 op-60>Powered by ({model}), for Yang, Bob and Yina.</p>
+  
 </header>
